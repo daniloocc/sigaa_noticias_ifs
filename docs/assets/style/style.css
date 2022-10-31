@@ -53,7 +53,6 @@ nav {
   background-size: 32px 32px;
   background-position: center;
   padding: 16px 16px;
-  width: auto;
 }
 
 .painel-mensagens {
@@ -176,6 +175,10 @@ nav {
   font-weight: bold;
   border: 0;
   border-radius: 50%;
+}
+.modal h2 {
+  font-size: 18px;
+  font-weight: bold;
 }
 .modal p {
   font-size: 0.9rem;
