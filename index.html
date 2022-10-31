@@ -37,7 +37,7 @@
                 <img src="https://via.placeholder.com/250x200.png?text=SIGAA" alt="mensagem">
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h4>
-                <input type="button" class="btn-ver" value="Ver Notícia"></input>
+                <button class="btn-ver">Ver Notícia</button>
                 <h5>Cadastrada em 21/10/2022</h5>
             </div>
 
@@ -76,12 +76,17 @@
 
     </section>
 
+    <section class="modal hidden">    
+        <button class="btn-close">X</button>    
+        <h1>DGR - Valores Serviço Público - Profissionalismo</h1>
+        <h3>Notícia cadastrada em <span style="font-weight:bold;">31 de Agosto de 2022</span></h3>
+        <p><img src="https://sigadmin.ifs.edu.br/shared/verImagem?salvar=false&idArquivo=1022881&key=4f8452ddc98724d86157e3d671dcf39f" alt=""></p>
+    </section>
+    <div class="overlay hidden"></div>
+
     <script>
 
-        function versao(){
-            alert('Curioso vc é')
-        }
-
+        /* função que gera mock elements para popular o layout*/
         mensagem = document.querySelector('.mensagem');
         painelMensagens = document.querySelector('.lista-mensagens');
 
@@ -89,6 +94,33 @@
             console.log(i)
             painelMensagens.append(mensagem.cloneNode(true));
         }
+
+        function versao(){
+            alert('Curioso vc é')
+        }
+
+        const modal = document.querySelector(".modal");
+        const overlay = document.querySelector(".overlay");
+        const openModalBtn = document.querySelectorAll(".btn-ver");
+        const closeModalBtn = document.querySelector(".btn-close");
+
+        /* alterna o a classe hidden para o modal */
+        const alternaModal = function () {
+            modal.classList.toggle("hidden");
+            overlay.classList.toggle("hidden");
+        };
+
+        closeModalBtn.addEventListener("click", alternaModal);
+        for(var i = 0; i < openModalBtn.length; i++ ){
+            console.log(i+"openModal");
+            openModalBtn[i].addEventListener("click", alternaModal);
+        }
+        overlay.addEventListener("click", alternaModal);
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+                alternaModal();
+            }
+        });
 
     </script>
 
