@@ -18,7 +18,7 @@
 
 body {
   font-family: var(--fonte-primaria);
-  background: url("/img/bg.jpg");
+  background: url("../images/bg.jpg");
 }
 
 /* header */
@@ -35,7 +35,7 @@ nav {
     .menu__item {
 
         .menu__titulo {
-            background-image: url("/img/logo_ifs.png");
+            background-image: url("../images/logo_ifs.png");
             background-repeat: no-repeat;
             background-position: center;
             padding: 40px 140px;
@@ -44,7 +44,7 @@ nav {
         }
 
         .seta-direita {
-            background-image: url("/img/seta-direita.png");
+            background-image: url("../images/seta-direita.png");
             background-repeat: no-repeat;
             background-size: 32px 32px;
             background-position: center;
