@@ -22,6 +22,11 @@ body {
   justify-content: center;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 /* header */
 nav {
   background-color: var(--azul);
@@ -47,7 +52,7 @@ nav {
   background-repeat: no-repeat;
   background-size: 32px 32px;
   background-position: center;
-  padding: 16px 30px;
+  padding: 16px 16px;
   width: auto;
 }
 
@@ -151,7 +156,6 @@ nav {
   justify-content: space-around;
   gap: 0.4rem;
   align-self: center;
-  max-width: var(--tamanho-maximo);
   padding: 1.3rem;
   min-height: 250px;
   top: 10%;
@@ -176,6 +180,7 @@ nav {
 .modal p {
   font-size: 0.9rem;
   margin: 0.4rem 0 0.2rem;
+  max-width: var(--tamanho-maximo);
 }
 
 .overlay {

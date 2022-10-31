@@ -108,6 +108,7 @@
         const alternaModal = function () {
             modal.classList.toggle("hidden");
             overlay.classList.toggle("hidden");
+            window.scrollTo(0, 10);
         };
 
         closeModalBtn.addEventListener("click", alternaModal);
