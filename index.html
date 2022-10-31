@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gisele é mó gostosa">
+    <meta name="keywords" content="Gisele, gostosa, tesuda">
+    <meta name="author" content="Danilo">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias SIGAA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./img/Favicon2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/grid.css">
+    <link rel="stylesheet" href="./style/flex.css">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li class="menu__item">
+                    <h1 class="menu__titulo"></h1>
+                </li>
+                <li class="menu__item"><a href="#"><h1 class="seta-direita"></h1></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="painel-mensagens">
+
+        <h1>Mural de Avisos</h1>
+        <div class="lista-mensagens">
+
+            <div class="mensagem">
+                <img src="https://via.placeholder.com/250x200.png?text=SIGAA" alt="mensagem">
+                <h3>Lorem ipsum dolor sit amet</h3>
+                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h4>
+                <input type="button" class="btn-ver" value="Ver Notícia"></input>
+                <h5>Cadastrada em 21/10/2022</h5>
+            </div>
+
+        </div>
+
+        <div class="paginacao">
+            <input type="button" class="btn-paginacao" value="<" disabled>
+            <input type="button" class="btn-paginacao" value="1">
+            <input type="button" class="btn-paginacao" value="2">
+            <input type="button" class="btn-paginacao" value="3">
+            <input type="button" class="btn-paginacao" value="4">
+            <input type="button" class="btn-paginacao" value=">">
+            <input type="button" class="btn-paginacao btn-pular" value="Pular Avisos"/>
+        </div>
+
+
+    </section>
+
+    <section class="rodape">
+        <span>
+            SISTEMAS SIGs | 
+            IFS - Instituto Federal de Sergipe - 
+            IFS - 
+            (79) 3711-1400	| 
+            Copyright ©
+            2006-2022 - 
+            UFRN -
+            BRONTES.srv2inst1
+            
+            
+                - <a onclick="javascript:versao();">v2.5.33_s.63</a>
+            
+            
+            <small>31/10/2022 15:05</small>
+        </span>
+
+    </section>
+
+    <script>
+
+        function versao(){
+            alert('Curioso vc é')
+        }
+
+        mensagem = document.querySelector('.mensagem');
+        painelMensagens = document.querySelector('.lista-mensagens');
+
+        for(i=0; i<5; i++){
+            console.log(i)
+            painelMensagens.append(mensagem.cloneNode(true));
+        }
+
+    </script>
+
+</body>
+</html>
