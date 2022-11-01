@@ -43,7 +43,7 @@ nav {
   background-image: url("../images/logo_ifs.png");
   background-repeat: no-repeat;
   background-position: center;
-  padding: 40px 140px;
+  padding: 45px 110px;
   width: 100%;
   cursor: pointer;
 }
@@ -52,7 +52,7 @@ nav {
   background-repeat: no-repeat;
   background-size: 32px 32px;
   background-position: center;
-  padding: 16px 16px;
+  padding: 16px 20px;
 }
 
 .painel-mensagens {
