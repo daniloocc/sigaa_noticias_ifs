@@ -39,7 +39,7 @@
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <button class="btn-ver">Ver Notícia</button>
+                <button class="btn-ver" onclick="alternaModal()">Ver Notícia</button>
                 <h5>Cadastrada em 21/10/2022</h5>
             </div>
 
@@ -79,7 +79,7 @@
     </section>
 
     <section class="modal hidden">    
-        <button class="btn-close">X</button>    
+        <button class="btn-close" onclick="alternaModal()">X</button>    
         <h2>DGR - Valores Serviço Público - Profissionalismo</h2>
         <small>Notícia cadastrada em <span style="font-weight:bold;">31 de Agosto de 2022</span></small>
         <p><img src="https://sigadmin.ifs.edu.br/shared/verImagem?salvar=false&idArquivo=1022881&key=4f8452ddc98724d86157e3d671dcf39f" alt=""></p>
@@ -92,6 +92,20 @@
         mensagem = document.querySelector('.mensagem');
         painelMensagens = document.querySelector('.lista-mensagens');
 
+        const adicionaElemento = function addMensagem(){
+            painelMensagens.append(mensagem.cloneNode(true));
+        }
+
+        const removeElemento = function(){
+            painelMensagens.removeChild(painelMensagens.lastChild)
+        }
+
+        botaoAdiciona = document.querySelector('.seta-direita');
+        botaoAdiciona.addEventListener('click', adicionaElemento);
+
+        removeUmElemento = document.querySelector('.menu__titulo');
+        removeUmElemento.addEventListener('click', removeElemento);
+
         for(i=0; i<5; i++){
             console.log(i)
             painelMensagens.append(mensagem.cloneNode(true));
@@ -103,21 +117,22 @@
 
         const modal = document.querySelector(".modal");
         const overlay = document.querySelector(".overlay");
-        const openModalBtn = document.querySelectorAll(".btn-ver");
+        // const openModalBtn = document.querySelectorAll(".btn-ver");
         const closeModalBtn = document.querySelector(".btn-close");
 
         /* alterna o a classe hidden para o modal */
         const alternaModal = function () {
+            console.log('clicou')
             modal.classList.toggle("hidden");
             overlay.classList.toggle("hidden");
             window.scrollTo(0, 0);
         };
 
-        closeModalBtn.addEventListener("click", alternaModal);
-        for(var i = 0; i < openModalBtn.length; i++ ){
-            console.log(i+"openModal");
-            openModalBtn[i].addEventListener("click", alternaModal);
-        }
+        // closeModalBtn.addEventListener("click", alternaModal);
+        // for(var i = 0; i < openModalBtn.length; i++ ){
+        //     console.log(i+"openModal");
+        //     openModalBtn[i].addEventListener("click", alternaModal);
+        // }
         overlay.addEventListener("click", alternaModal);
         document.addEventListener("keydown", function (e) {
             if (e.key === "Escape" && !modal.classList.contains("hidden")) {

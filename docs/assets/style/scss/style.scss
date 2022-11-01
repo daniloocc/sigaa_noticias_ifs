@@ -21,9 +21,6 @@
 body {
   font-family: var(--fonte-primaria);
   background: url("../images/bg.jpg");
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 img {
@@ -64,28 +61,27 @@ nav {
     }
 }
 
+
 .painel-mensagens {
     background-color: rgba(#fefefe, 0.9);
-    max-width: var(--tamanho-maximo);
     margin: 0 auto;
+    max-width: var(--tamanho-maximo);  
     padding-top: 30px;
     padding-bottom: 30px;
+
 
     h1 {
         font-size: 30px;
         font-weight: bold;
         text-align: center;
-        padding: 15px;
-    }
+        padding: 15px;        
+    }    
 
-    
-
-    .lista-mensagens {
+    .lista-mensagens {  
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-
-
+        gap: 15px;
 
         .mensagem {
             display: grid;
