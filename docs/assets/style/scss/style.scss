@@ -65,7 +65,7 @@ nav {
 }
 
 .painel-mensagens {
-    background-color: #fefefe;
+    background-color: rgba(#fefefe, 0.9);
     max-width: var(--tamanho-maximo);
     margin: 0 auto;
     padding-top: 30px;
@@ -103,14 +103,16 @@ nav {
             h3 {
                 grid-area: 2/1/3/3;
                 font-size: 18px;
-
+                text-align: justify;
+                text-justify: distribute;
                 font-weight: 600;
             }
             
-            h4 {
+            p {
                 grid-area: 3/1/4/3;
                 font-size: 16px;
                 line-height: normal;
+                text-align: justify;
             }
             
             .btn-ver {
@@ -127,6 +129,7 @@ nav {
                 grid-area: 4/2/5/3;
                 font-size: 14px;
                 align-self: center;
+                text-align: center;
             }
 
         }
